@@ -1,0 +1,19 @@
+{
+  "name": "leaderboard",
+  "version": "1.0.0",
+  "description": "Leaderboard score",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ntwali-Josue/leaderboard.git"
+  },
+  "author": "KARANGWA Ntwali Josue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ntwali-Josue/leaderboard/issues"
+  },
+  "homepage": "https://github.com/Ntwali-Josue/leaderboard#readme"
+}
