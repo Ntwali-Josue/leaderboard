@@ -4,11 +4,10 @@
 }
 
 .list-group {
-  width: 300px;
   margin-top: 10px;
 }
 
-.btn {
+.button {
   background-color: #fff;
   border: 1px solid #000;
 }
