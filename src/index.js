@@ -2,6 +2,13 @@ import './style.css';
 
 const root = document.querySelector('.root');
 
+const fetchOnRefresh = async () => {
+  const scores = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Dgl1g5JXUz6joOBlRdMy/scores')
+    .then((response) => response.json())
+    .then((json) => console.log(json.result[0]));
+  return scores;
+};
+
 const leaderboardTitle = () => {
   const leaderboardTitle = document.createElement('h1');
   leaderboardTitle.innerHTML += '<h1 class="mb-5 ms-3">Leaderboard</h1>';
@@ -14,7 +21,7 @@ const leaderboard = () => {
   leaderboardSection.innerHTML += `<div class="container">
   <div class="title d-flex">
     <h2 class="px-2">Recent scores</h2>
-    <button type="button" class="refresh button btn mx-5">Refresh</button>
+    <button type="button" class="refresh button btn mx-5" onclick='${fetchOnRefresh()}'>Refresh</button>
   </div>
   <div class="player-scores mt-4">
     <ul class="list-group" id="scores">
@@ -46,3 +53,6 @@ const leaderboard = () => {
 
 leaderboardTitle();
 leaderboard();
+
+// refreshButton.addEventListener('click', fetchOnRefresh);
+// fetchOnRefresh();
