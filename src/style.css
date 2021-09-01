@@ -1,0 +1,18 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* text-align: center; */
+}
+
+.list-group {
+  width: 300px;
+  margin-top: 10px;
+}
+
+.btn {
+  background-color: #fff;
+  border: 1px solid #000;
+}
