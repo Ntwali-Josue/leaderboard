@@ -3,10 +3,20 @@ import './style.css';
 const root = document.querySelector('.root');
 
 const fetchOnRefresh = async () => {
-  const scores = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Dgl1g5JXUz6joOBlRdMy/scores')
-    .then((response) => response.json())
-    .then((json) => console.log(json.result[0]));
-  return scores;
+  let results;
+  await fetch(
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Dgl1g5JXUz6joOBlRdMy/scores',
+  ).then((response) => response.json())
+    .then((json) => {
+      const ul = document.querySelector('#scores');
+      ul.innerHTML = '';
+      for (let i = 0; i < json.result.length; i += 1) {
+        results = json.result[i];
+        const list = document.createElement('li');
+        list.innerHTML += `<li class="list-group-item text-start">${results.user}: ${results.score}</li>`;
+        ul.appendChild(list);
+      }
+    });
 };
 
 const leaderboardTitle = () => {
@@ -21,20 +31,11 @@ const leaderboard = () => {
   leaderboardSection.innerHTML += `<div class="container">
   <div class="title d-flex">
     <h2 class="px-2">Recent scores</h2>
-    <button type="button" class="refresh button btn mx-5" onclick='${fetchOnRefresh()}'>Refresh</button>
+    <button type="button" class="refresh button btn mx-5">Refresh</button>
   </div>
   <div class="player-scores mt-4">
-    <ul class="list-group" id="scores">
-      <li class="list-group-item text-start">Name : 100</li>
-      <li class="list-group-item list-group-item-dark text-start">
-        Name: 20
-      </li>
-      <li class="list-group-item text-start">Name: 50</li>
-      <li class="list-group-item list-group-item-dark text-start">
-        Name: 78
-      </li>
-      <li class="list-group-item text-start">Name: 125</li>
-    </ul>
+    <span class="px-2">Click the Refresh button to load the scores.<span>
+    <ul class="list-group" id="scores"></ul>
   </div>
 </div>
 <div class="container">
@@ -54,5 +55,5 @@ const leaderboard = () => {
 leaderboardTitle();
 leaderboard();
 
-// refreshButton.addEventListener('click', fetchOnRefresh);
-// fetchOnRefresh();
+const refreshButton = document.querySelector('.refresh');
+refreshButton.addEventListener('click', fetchOnRefresh);
