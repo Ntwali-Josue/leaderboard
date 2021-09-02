@@ -10,11 +10,11 @@ const fetchScores = async () => {
     'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Dgl1g5JXUz6joOBlRdMy/scores',
   ).then((response) => response.json())
     .then((json) => {
-      const ul = document.querySelector('#scores');
+      const tableList = document.querySelector('#scores');
       for (let i = 0; i < json.result.length; i += 1) {
         results = json.result[i];
-        const list = document.createElement('tr');
-        list.innerHTML += `
+        const scores = document.createElement('tr');
+        scores.innerHTML += `
         <tr>
         <td>${results.user}</td>
         </tr>
@@ -22,7 +22,7 @@ const fetchScores = async () => {
         <td>${results.score}</td>
         </tr>
       `;
-        ul.appendChild(list);
+        tableList.appendChild(scores);
       }
     });
 };
@@ -49,7 +49,7 @@ const leaderboard = () => {
     <th scope="col">Scores</th>
   </tr>
 </thead>
-<tbody class="overflow" id="scores">
+<tbody id="scores">
 </tbody>
 </table>
   </div>
