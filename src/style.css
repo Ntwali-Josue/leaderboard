@@ -3,18 +3,10 @@
   margin: 0;
 }
 
-.list-group {
-  margin-top: 10px;
-}
-
 .button {
   border: 1px solid #000;
   color: #fff;
   background-color: #2934d1;
-}
-
-li {
-  list-style: none;
 }
 
 input {
@@ -25,8 +17,8 @@ input {
 
 .overflow {
   overflow: auto;
-  height: 50vh;
-  border: 1px #cecece solid;
+  height: 60vh;
+  border: 1px #000 solid;
 }
 
 .names,
