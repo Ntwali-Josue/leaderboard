@@ -41,9 +41,9 @@ const leaderboard = () => {
 <div class="container">
   <form>
     <h3 class="mb-4">Add your score</h3>
-    <input type="text" placeholder="Your name" class="names" required /> <br />
+    <input type="text" placeholder="Your name" class="names" required/> <br />
     <br />
-    <input type="number" placeholder="Your score" class="scores" required /> <br />
+    <input type="number" placeholder="Your score" class="scores" required/> <br />
     <br />
     <input type="submit" value="Submit" class="button submit btn" />
   </form>
