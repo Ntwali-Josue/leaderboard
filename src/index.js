@@ -22,7 +22,7 @@ const fetchScores = async () => {
 
 const leaderboardTitle = () => {
   const leaderboardTitle = document.createElement('h1');
-  leaderboardTitle.innerHTML += '<h1 class="mb-5 ms-3">Leaderboard</h1>';
+  leaderboardTitle.innerHTML += '<h1 class="mb-5 ms-3 text-center">Leaderboard</h1>';
   root.appendChild(leaderboardTitle);
 };
 
