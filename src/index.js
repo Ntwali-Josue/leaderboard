@@ -13,8 +13,15 @@ const fetchScores = async () => {
       const ul = document.querySelector('#scores');
       for (let i = 0; i < json.result.length; i += 1) {
         results = json.result[i];
-        const list = document.createElement('li');
-        list.innerHTML += `<li class="list-group-item border-0 border-bottom">${results.user}: ${results.score}</li>`;
+        const list = document.createElement('tr');
+        list.innerHTML += `
+        <tr>
+        <td>${results.user}</td>
+        </tr>
+        <tr>
+        <td>${results.score}</td>
+        </tr>
+      `;
         ul.appendChild(list);
       }
     });
@@ -29,17 +36,26 @@ const leaderboardTitle = () => {
 const leaderboard = () => {
   const leaderboardSection = document.createElement('section');
   leaderboardSection.classList.add('d-flex');
-  leaderboardSection.innerHTML += `<div class="container justify-content-center">
+  leaderboardSection.innerHTML += `<div class="container justify-content-center shadow-lg p-3 mb-5 ms-5 bg-white rounded">
   <div class="title d-flex justify-content-between">
     <h2 class="px-2">Recent scores</h2>
     <button type="button" class="refresh button btn">Refresh</button>
   </div>
   <div class="player-scores mt-4">
-    <ul class="list-group overflow" id="scores"></ul>
+    <table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Names</th>
+    <th scope="col">Scores</th>
+  </tr>
+</thead>
+<tbody class="overflow" id="scores">
+</tbody>
+</table>
   </div>
 </div>
 <div class="container">
-  <form>
+  <form class="shadow p-3 mb-5 bg-white rounded text-center">
     <h3 class="mb-4">Add your score</h3>
     <input type="text" placeholder="Your name" class="names" required/> <br />
     <br />
