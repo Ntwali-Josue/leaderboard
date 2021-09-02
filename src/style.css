@@ -10,7 +10,7 @@
 .button {
   border: 1px solid #000;
   color: #fff;
-  background-color: rgb(41, 52, 209);
+  background-color: #2934d1;
 }
 
 li {
@@ -18,7 +18,7 @@ li {
 }
 
 input {
-  padding: 5px 10px;
+  padding: 5px 5px;
   border: 1px solid #c6c6c6;
   border-radius: 5px;
 }
@@ -26,5 +26,10 @@ input {
 .overflow {
   overflow: auto;
   height: 50vh;
-  border: 1px rgb(206, 206, 206) solid;
+  border: 1px #cecece solid;
+}
+
+.names,
+.scores {
+  width: 50%;
 }
