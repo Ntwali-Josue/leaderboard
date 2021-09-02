@@ -41,7 +41,7 @@ const leaderboard = () => {
     <h2 class="px-2">Recent scores</h2>
     <button type="button" class="refresh button btn">Refresh</button>
   </div>
-  <div class="player-scores mt-4">
+  <div class="player-scores mt-4 overflow">
     <table class="table table-striped">
   <thead>
   <tr>
