@@ -4,13 +4,20 @@ const fetchOnRefresh = async () => {
     'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Dgl1g5JXUz6joOBlRdMy/scores',
   ).then((response) => response.json())
     .then((json) => {
-      const ul = document.querySelector('#scores');
-      ul.innerHTML = '';
+      const tableList = document.querySelector('#scores');
+      tableList.innerHTML = '';
       for (let i = 0; i < json.result.length; i += 1) {
         results = json.result[i];
-        const list = document.createElement('li');
-        list.innerHTML += `<li class="list-group-item text-start">${results.user}: ${results.score}</li>`;
-        ul.appendChild(list);
+        const scores = document.createElement('tr');
+        scores.innerHTML += `
+        <tr>
+        <td>${results.user}</td>
+        </tr>
+        <tr>
+        <td>${results.score}</td>
+        </tr>
+      `;
+        tableList.appendChild(scores);
       }
     });
 };
