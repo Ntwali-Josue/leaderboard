@@ -14,7 +14,7 @@ const fetchScores = async () => {
       for (let i = 0; i < json.result.length; i += 1) {
         results = json.result[i];
         const list = document.createElement('li');
-        list.innerHTML += `<li class="list-group-item text-start">${results.user}: ${results.score}</li>`;
+        list.innerHTML += `<li class="list-group-item border-0 border-bottom">${results.user}: ${results.score}</li>`;
         ul.appendChild(list);
       }
     });
@@ -29,13 +29,13 @@ const leaderboardTitle = () => {
 const leaderboard = () => {
   const leaderboardSection = document.createElement('section');
   leaderboardSection.classList.add('d-flex');
-  leaderboardSection.innerHTML += `<div class="container">
-  <div class="title d-flex">
+  leaderboardSection.innerHTML += `<div class="container justify-content-center">
+  <div class="title d-flex justify-content-between">
     <h2 class="px-2">Recent scores</h2>
-    <button type="button" class="refresh button btn mx-5">Refresh</button>
+    <button type="button" class="refresh button btn">Refresh</button>
   </div>
   <div class="player-scores mt-4">
-    <ul class="list-group" id="scores"></ul>
+    <ul class="list-group overflow" id="scores"></ul>
   </div>
 </div>
 <div class="container">
