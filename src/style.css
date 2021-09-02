@@ -10,9 +10,21 @@
 .button {
   border: 1px solid #000;
   color: #fff;
-  background-color: #7c7a7a;
+  background-color: rgb(41, 52, 209);
 }
 
 li {
   list-style: none;
+}
+
+input {
+  padding: 5px 10px;
+  border: 1px solid #c6c6c6;
+  border-radius: 5px;
+}
+
+.overflow {
+  overflow: auto;
+  height: 50vh;
+  border: 1px rgb(206, 206, 206) solid;
 }
