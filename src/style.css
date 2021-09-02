@@ -8,8 +8,9 @@
 }
 
 .button {
-  background-color: #fff;
   border: 1px solid #000;
+  color: #fff;
+  background-color: #7c7a7a;
 }
 
 li {
