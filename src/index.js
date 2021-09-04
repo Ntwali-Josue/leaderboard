@@ -7,7 +7,7 @@ const root = document.querySelector('.root');
 const fetchScores = async () => {
   let results;
   await fetch(
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Dgl1g5JXUz6joOBlRdMy/scores',
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/wR9B3hRbawbomUvn3wZJ/scores',
   )
     .then((response) => response.json())
     .then((json) => {
@@ -45,7 +45,7 @@ const leaderboard = () => {
       <button type="button" class="refresh button btn">Refresh</button>
     </div>
     <div class="player-scores mt-4 overflow">
-      <table class="table table-striped">
+      <table class="table table-striped table-fixed">
         <thead>
           <tr>
             <th scope="col">Names</th>
