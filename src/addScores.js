@@ -3,7 +3,7 @@ const addScores = async (e) => {
   const names = document.querySelector('.names').value;
   const scores = document.querySelector('.scores').value;
 
-  const fetchUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Dgl1g5JXUz6joOBlRdMy/scores';
+  const fetchUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/wR9B3hRbawbomUvn3wZJ/scores';
   await fetch(fetchUrl, {
     method: 'POST',
     headers: {
