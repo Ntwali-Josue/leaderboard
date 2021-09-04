@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+.root {
+  background: url('../images/bg-img.jpg');
+}
+
 .button {
   border: 1px solid #000;
   color: #fff;
@@ -17,11 +21,17 @@ input {
 
 .overflow {
   overflow: auto;
-  height: 60vh;
+  height: 50vh;
   border: 1px #000 solid;
 }
 
 .names,
 .scores {
   width: 60%;
+}
+
+form {
+  width: 500px;
+  margin-left: 30px;
+  margin-top: 300px;
 }
