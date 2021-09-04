@@ -1,7 +1,7 @@
 const fetchOnRefresh = async () => {
   let results;
   await fetch(
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Dgl1g5JXUz6joOBlRdMy/scores',
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/wR9B3hRbawbomUvn3wZJ/scores',
   ).then((response) => response.json())
     .then((json) => {
       const tableList = document.querySelector('#scores');
