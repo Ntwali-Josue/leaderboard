@@ -3,10 +3,6 @@
   margin: 0;
 }
 
-.root {
-  background: url('../images/bg-img.jpg');
-}
-
 .button {
   border: 1px solid #000;
   color: #fff;
